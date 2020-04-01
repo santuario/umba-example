@@ -1,6 +1,8 @@
-# Umba
-## Code example
+# Umba - Code example
 
+This project is simple Lorem ipsum dolor generator.
+
+![Trackstreet Web](./images/1.png)
 
 ## General info
 This project is simple Lorem ipsum dolor generator.
@@ -19,4 +21,6 @@ $ cd ../lorem
 $ npm install
 $ npm start
 ```
+
+# Bonus
 
