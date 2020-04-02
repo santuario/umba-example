@@ -1,11 +1,22 @@
 # Umba - Code example
 
-This project is simple Lorem ipsum dolor generator.
+[TrackStreet](https://www.trackstreet.com) has built an industry leading SaaS platform that leverages the power of artificial intelligence and automation to radically reduce brand and pricing policy violations. 
 
 ![Trackstreet Web](./images/1.png)
 
+
+
+
 ## General info
 This project is simple Lorem ipsum dolor generator.
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+
 	
 ## Technologies
 Project is created with:
