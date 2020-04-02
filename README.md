@@ -4,6 +4,27 @@
 
 ![Trackstreet Web](./images/1.png)
 
+For this purpose, a series of web crawlers downloaded the information of different products in a series of online stores (BestBuy, Amazon, Target, ...) to analyze their price, description and image. As a Data Scientist, to know if a product belonged to one of the clients, I had a supervised text classification problem, and my goal was to investigate which supervised machine learning methods was best suited to solve it.
+
+### Objective
+
+* Need a way to choose between models (different model types, tuning parameters, and features).
+* Use a **model evaluation procedure** to estimate how well a model will generalize to *out-of-sample* data.
+* Requires a **model evaluation metric** to quantify the model performance.
+
+### Review of our model evaluation
+
+* **Model evaluation procedure**: K-fold cross-validation
+* **Model evaluation metrics**: F1 Score
+
+### Agenda
+
+1. Reading a text-based dataset into pandas
+2. Vectorizing our dataset
+3. Building a model
+4. Comparing models
+
+
 
 
 
