@@ -19,23 +19,32 @@ For this purpose, a series of web crawlers downloaded the information of differe
 
 ### Agenda
 
-1. Reading a text-based dataset into pandas
+1. Reading a text-based dataset
 2. Vectorizing our dataset
-3. Building a model
-4. Comparing models
+3. Choose n-gram or n-char approximation
+4. Building a model
+5. Comparing models
+6. Choose a model
+7. Improve hyperparameters
+8. Build a class
+0. Run a cron job for trainning
 
 
 
-
-
-## General info
+## Data example
 This project is simple Lorem ipsum dolor generator.
 
 
-Markdown | Less | Pretty
+Product Text (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+Trijicon ACOG | 658010111379 | 4
+Trijicon ACOG 6x48mm Chevron | 658010111546 | 4
+Trijicon 6X48 acog. TA648-50G | 658010111249 | 4
+Ultimate Flora Women's Care Probiotic 15 Billion | 631257158789 | 52
+Renew Life Women's Care Ultimate Flora Probiotic | 658010111379 | 52
+Ultimate Flora Probiotic 15 Billion | 658012531373 | 52
+Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
+
 
 
 	
