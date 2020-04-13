@@ -34,6 +34,8 @@ For this purpose, a series of web crawlers downloaded the information of differe
 ## Data example
 This project is simple Lorem ipsum dolor generator.
 
+![Trackstreet Web](./images/2.png)
+
 
 Product Text (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
