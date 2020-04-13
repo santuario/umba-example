@@ -1,4 +1,4 @@
-# Umba - Code example
+# UMBA - Code example
 
 [TrackStreet](https://www.trackstreet.com) has built an industry leading SaaS platform that leverages the power of artificial intelligence and automation to radically reduce brand and pricing policy violations. 
 
@@ -59,6 +59,17 @@ Project is created with:
 * Lorem version: 12.3
 * Ipsum version: 2.33
 * Ament library version: 999
+
+
+```python
+# Model evaluation metrics: F1 Score
+from sklearn.metrics import f1_score
+
+
+def f1_multilabel(estimador, X, y):
+    preds = estimador.predict(X)
+    return f1_score(y, preds, average="micro")
+```
 	
 ## Setup
 To run this project, install it locally using npm:
@@ -69,11 +80,11 @@ $ npm install
 $ npm start
 ```
 
-# Bonus
+# BONUS
 
 So, I do work in the world of technology, but all the speech about figure out ways to simply monetize technology with AI, ML or Data and deploy it around the world absolutely bores me to tears...
 
-I’m, you know, reading a really cool article on *Wired Magazine* about a new refrigerator that predicts with AI when the ice container is going to be empty and that, for me, is like watching paint dry... I just don’t care... What I do care about, however, is what do you do with it: How do you take this technology based on algorithms and put it into a place that’s never had it before... In other words, I’m interested in merge Data and AI/ML with ethics as a creative-problem-solving tool. For example:
+I’m, you know, reading a really cool article on *Wired Magazine* about a new refrigerator that predicts with AI when the ice container is going to be empty and that, for me, is like watching paint dry... I just don’t care... What I do care about, however, is what do you do with it: How do you take this technology based on algorithms and put it into a place that’s never had it before... In other words, I’m interested in merge *Data* and *AI/ML* with ethics as a creative-problem-solving tool. For example:
 
 
 **1)** In order to understand the *social mobility* based on skin tone, [I calculated the PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
