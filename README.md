@@ -76,9 +76,11 @@ So, I do work in the world of technology, but all the speech about figure out wa
 I’m, you know, reading a really cool article on *Wired Magazine* about a new refrigerator that predicts with AI when the ice container is going to be empty and that, for me, is like watching paint dry... I just don’t care... What I do care about, however, is what do you do with it: How do you take this technology based on algorithms and put it into a place that’s never had it before... In other words, I’m interested in merge Data and AI/ML with ethics as a creative-problem-solving tool. For example:
 
 
-**1)** In order to understand the *social mobility* based on skin tone, [I calculate the +PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
+**1)** In order to understand the *social mobility* based on skin tone, [I calculated the PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
 
-**2)** Or I use Big Data on Twitter in order to see [the age at which sexual assaults begins in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https://verne.elpais.com/verne/2016/05/19/mexico/1463615258_699475.html) 
+**2)** I used Big Data on *Twitter* in order to see [the age at which sexual assaults begins in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https://verne.elpais.com/verne/2016/05/19/mexico/1463615258_699475.html) 
+
+**3)** Or I made a *LinkedIn*'s web scraping to realize if exists a [*shortcut* to be CEO in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https%3A%2F%2Fwww.unocero.com%2Fredes-sociales%2Fblancos-hombres-de-escuelas-privadas-y-bilingues-asi-son-los-ceos-en-mexico%2F&sandbox=1) 
 
 
 
