@@ -25,9 +25,10 @@ For this purpose, a series of web crawlers downloaded the information of differe
 4. Building a model
 5. Comparing models
 6. Choose a model
-7. Improve hyperparameters
-8. Build a class
-0. Run a cron job for trainning
+7. Identify Outliers
+8. Improve hyperparameters
+9. Build a class
+10. Run a cron job for trainning
 
 
 
@@ -36,6 +37,9 @@ This project is simple Lorem ipsum dolor generator.
 
 ![Trackstreet Web](./images/2.png)
 
+
+
+*trijicon 6 x 48 mm acog Dual iluminación ámbar Chevron .223 retículo) 6,5 Moa RMR 2 Vista óptica ta75 Mount, color negro*
 
 Product Text (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
@@ -66,4 +70,17 @@ $ npm start
 ```
 
 # Bonus
+
+So, I do work in the world of technology, but all the speech about figure out ways to simply monetize technology with AI, ML or Data and deploy it around the world absolutely bores me to tears...
+
+I’m, you know, reading a really cool article on *Wired Magazine* about a new refrigerator that predicts with AI when the ice container is going to be empty and that, for me, is like watching paint dry... I just don’t care... What I do care about, however, is what do you do with it: How do you take this technology based on algorithms and put it into a place that’s never had it before... In other words, I’m interested in merge Data and AI/ML with ethics as a creative-problem-solving tool. For example:
+
+
+**1)** In order to understand the *social mobility* based on skin tone, [I calculate the +PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
+
+**2)** Or I use Big Data on Twitter in order to see [the age at which sexual assaults begins in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https://verne.elpais.com/verne/2016/05/19/mexico/1463615258_699475.html) 
+
+
+
+
 
