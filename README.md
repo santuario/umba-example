@@ -4,7 +4,7 @@
 
 ![Trackstreet Web](./images/1.png)
 
-In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their price, description and image. In order to know if a product belonged to one of the clients, in my role as a Data Scientist, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods was best suited to solve it.
+In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their price, description and image. In order to know if a product belonged to one of the clients, in my role as a Data Scientist, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods were best suited to solve it.
 
 ### Problems that were solved
 
@@ -86,11 +86,9 @@ $ npm start
 
 
 As you can see, I breath and live technology; but all the babble about the next best way of using AI, ML, or Data for the sole purpose of monetizing and implement it around the world absolutely bores me to tears... 
-So, I do work in the world of technology, but all the speech about figure out ways to simply monetize technology with AI, ML or Data and deploy it around the world absolutely bores me to tears...
+
 
 I can be reading a really cool article on *Wired Magazine* about this new fridge that uses AI to predict when you need to buy more sparkling water or something and, for me, it is like watching paint dry. I couldn't care less. What I *do* care about is what you do with it: how do you take this algorithm based technology and make it live in places it's never been before... What I'm really interested in is the convergence of *Data* and *AI/ML* with ethics as a tool for creative troubleshooting. For example: 
-
-I’m, you know, reading a really cool article on *Wired Magazine* about a new refrigerator that predicts with AI when the ice container is going to be empty and that, for me, is like watching paint dry... I just don’t care... What I do care about, however, is what do you do with it: How do you take this technology based on algorithms and put it into a place that’s never had it before... In other words, I’m interested in merge *Data* and *AI/ML* with ethics as a creative-problem-solving tool. For example:
 
 
 **1)** In order to understand the *social mobility* based on skin tone, [I calculated the PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
