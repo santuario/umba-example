@@ -19,7 +19,7 @@ In order to achieve this, a series of web crawlers were set up to download the i
 
 ### Workflow
 
-1. [Reading a text-based dataset](#reading-a-text-based-dataset)
+1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
 2. Choose n-gram or n-char approximation
 3. Vectorizing our dataset 
 4. Building a model
