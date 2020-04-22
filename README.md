@@ -67,11 +67,11 @@ As we see from the *training data*, we are faced with a non-classical text proce
 
 In this step, raw text data was transformed into feature vectors and new features was created using the existing dataset. The following ideas was implemented in order to obtain relevant features from our dataset.
 
-2.1 Count Vectors as features
-2.2 TF-IDF Vectors as features
-    2.2.1 Word level
-    2.2.2 N-Gram level
-    2.2.3 Character level (n-char)
+3.1. Count Vectors as features
+3.2. TF-IDF Vectors as features
+    - Word level
+    - N-Gram level
+    - Character level (n-char)
 
 
 
