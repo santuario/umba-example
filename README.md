@@ -60,7 +60,42 @@ Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
 ### 2. Dataset preparation and pre-processing
 
 
-As we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem.
+As we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem. For example, remove numbers is one of the most common recomendation, but, in our case, that not make sense, because numbers are a significant indetifier of the product.
+
+The following was implemented:
+
+
+* Convert to lower case
+* Remove punctuation
+* Removing stop words
+* Removing the 10 most common words inside the data set
+* Removing the 10 most rare words inside the data set
+
+
+
+```python
+
+def pre_processing_data(X,common_freq_count=10,rare_freq_count=10):
+    # Lower Case
+    X = X.apply(lambda x: " ".join(x.lower() for x in x.split()))
+    print(type(X))
+    # Removing Punctuation
+    X = X.str.replace('[^\w\s]','')
+    # Removing Stop Words
+    X = X.apply(lambda x: " ".join(x for x in x.split() if x not in stop))
+    # Common Word Removal
+    common_freq = pd.Series(' '.join(X).split()).value_counts()[:common_freq_count]
+    common_freq = list(common_freq.index)
+    X = X.apply(lambda x: " ".join(x for x in x.split() if x not in common_freq))
+    # Rare words Removal
+    rare_freq = pd.Series(' '.join(X).split()).value_counts()[-rare_freq_count:]
+    rare_freq = list(rare_freq.index)
+    X = X.apply(lambda x: " ".join(x for x in x.split() if x not in rare_freq))
+    
+    return X
+```
+
+
 
 
 ### 3. Choose *n-gram* or *n-char* approximation for vectorizing
@@ -72,6 +107,51 @@ In this step, raw text data was transformed into feature vectors and new feature
     * Word level
     * N-Gram level
     * Character level (n-char)
+
+**Count Vectors as features**
+
+Count Vector is a matrix notation of the dataset in which every row represents a document from the corpus, every column represents a term from the corpus, and every cell represents the frequency count of a particular term in a particular document.
+
+```python
+def transform_to_count_vectors(self,X):
+    count_vect = CountVectorizer(analyzer='word', token_pattern=r'\w{1,}')
+    return count_vect.fit(X)
+```
+
+
+**TF-IDF Vectors as features**
+
+TF-IDF score represents the relative importance of a term in the document and the entire corpus. TF-IDF score is composed by two terms: the first computes the normalized Term Frequency (TF), the second term is the Inverse Document Frequency (IDF), computed as the logarithm of the number of the documents in the corpus divided by the number of documents where the specific term appears. TF-IDF Vectors can be generated at different levels of input tokens (words, characters, n-grams)
+
+
+
+* Word level: Matrix representing tf-idf scores of every term in different documents
+* N-Gram level: N-grams are the combination of N terms together. This Matrix representing tf-idf scores of N-grams
+* Character level (n-char): Matrix representing tf-idf scores of character level n-grams in the corpus
+
+
+
+```python
+# word level tf-idf
+tfidf_vect = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', max_features=5000)
+tfidf_vect.fit(trainDF['text'])
+xtrain_tfidf =  tfidf_vect.transform(train_x)
+xvalid_tfidf =  tfidf_vect.transform(valid_x)
+
+# ngram level tf-idf 
+tfidf_vect_ngram = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', ngram_range=(2,3), max_features=5000)
+tfidf_vect_ngram.fit(trainDF['text'])
+xtrain_tfidf_ngram =  tfidf_vect_ngram.transform(train_x)
+xvalid_tfidf_ngram =  tfidf_vect_ngram.transform(valid_x)
+
+# characters level tf-idf
+tfidf_vect_ngram_chars = TfidfVectorizer(analyzer='char', token_pattern=r'\w{1,}', ngram_range=(2,3), max_features=5000)
+tfidf_vect_ngram_chars.fit(trainDF['text'])
+xtrain_tfidf_ngram_chars =  tfidf_vect_ngram_chars.transform(train_x) 
+xvalid_tfidf_ngram_chars =  tfidf_vect_ngram_chars.transform(valid_x) 
+```
+
+
 
 
 
