@@ -20,8 +20,8 @@ In order to achieve this, a series of web crawlers were set up to download the i
 ### Workflow
 
 1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
-2. [Choose *n-gram* or *n-char* approximation](#2-choose-n-gram-or-n-char-approximation)
-3. Vectorizing our dataset 
+2. [Dataset preparation and pre-processing](#2-dataset-preparation-and-pre-processing)
+3. [Choose *n-gram* or *n-char* approximation for vectorizing](#2-choose-n-gram-or-n-char-approximation-for-vectorizing)
 4. Building a model
 5. Comparing models
 6. Choose a model
@@ -59,9 +59,16 @@ Renew Life Women's Care Ultimate Flora Probiotic | 658010111379 | 52
 Ultimate Flora Probiotic 15 Billion | 658012531373 | 52
 Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
 
-### 2. Choose *n-gram* or *n-char* approximation
+### 2. Dataset preparation and pre-processing
 
 One of the goals of the TrackStreet Web Crawlers is to download the name of the products found on a certain web site, for example:
+
+### 3. Choose *n-gram* or *n-char* approximation for vectorizing
+
+One of the goals of the TrackStreet Web Crawlers is to download the name of the products found on a certain web site, for example:
+
+
+
 	
 ## Technologies
 Project is created with:
