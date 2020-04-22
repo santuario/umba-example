@@ -20,8 +20,8 @@ In order to achieve this, a series of web crawlers were set up to download the i
 ### Workflow
 
 1. Reading a text-based dataset
-2. Vectorizing our dataset
-3. Choose n-gram or n-char approximation
+2. Choose n-gram or n-char approximation
+3. Vectorizing our dataset 
 4. Building a model
 5. Comparing models
 6. Choose a model
@@ -34,7 +34,11 @@ In order to achieve this, a series of web crawlers were set up to download the i
 
 
 
-## Data example
+## Hands On
+
+### 1. Reading a text-based dataset
+
+
 This project is simple Lorem ipsum dolor generator.
 
 ![Trackstreet Web](./images/2.png)
