@@ -42,9 +42,9 @@ One of the goals of the TrackStreet Web Crawlers is to download the name of the 
 For this case we will have the following **Product Name** and 
 the objective of the model is to predict the **Product ID**.
 
-Product Name (*X*) |
---- |
-trijicon 6 x 48 mm acog | 
+Product Name (*X*) | Product ID (*Y*)
+--- | --- 
+trijicon 6 x 48 mm acog | **UNKNOWN**
 
 
 An excerpt of the *training data* is shown below:
@@ -52,7 +52,7 @@ An excerpt of the *training data* is shown below:
 Product Name (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
 Trijicon ACOG | 658010111379 | 4
-Trijicon ACOG 6x48mm Chevron | 658010111546 | d
+Trijicon ACOG 6x48mm Chevron | 658010111546 | 4
 Trijicon 6X48 acog. TA648-50G | 658010111249 | 4
 Ultimate Flora Women's Care Probiotic 15 Billion | 631257158789 | 52
 Renew Life Women's Care Ultimate Flora Probiotic | 658010111379 | 52
