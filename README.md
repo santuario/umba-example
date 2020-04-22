@@ -39,13 +39,15 @@ One of the goals of the TrackStreet Web Crawlers is to download the name of the 
 ![Trackstreet Web](./images/2.png)
 
 
-For this case we will have:
+For this case we will have the following **Product Name** and 
+the objective of the model is to predict the **Product ID**.
 
 Product Name (*X*) |
 --- |
-Trijicon ACOG | 
+trijicon 6 x 48 mm acog | 
 
-*trijicon 6 x 48 mm acog Dual iluminación ámbar Chevron .223 retículo) 6,5 Moa RMR 2 Vista óptica ta75 Mount, color negro*
+
+An excerpt of the *training data* is shown below:
 
 Product Name (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
