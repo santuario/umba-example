@@ -22,13 +22,12 @@ In order to achieve this, a series of web crawlers were set up to download the i
 1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
 2. [Dataset preparation and pre-processing](#2-dataset-preparation-and-pre-processing)
 3. [Choose *n-gram* or *n-char* approximation for vectorizing](#2-choose-n-gram-or-n-char-approximation-for-vectorizing)
-4. Building a model
-5. Comparing models
-6. Choose a model
-7. Identify Outliers
-8. Improve hyperparameters
-9. Build a class
-10. Run a cron job for trainning
+4. Comparing models
+5. Choose a model
+6. Identify Outliers
+7. Improve hyperparameters
+8. Build a class
+9. Run a cron job for trainning
 
 ## Hands On
 
