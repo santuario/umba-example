@@ -1,18 +1,18 @@
 # UMBA - Code example
 
-[TrackStreet](https://www.trackstreet.com) has built an industry leading SaaS platform that leverages the power of artificial intelligence and automation to radically reduce brand and pricing policy violations. 
+[TrackStreet](https://www.trackstreet.com) has built an industry leading *SaaS* platform that leverages the power of artificial intelligence and automation to radically reduce brand and pricing policy violations. 
 
 ![Trackstreet Web](./images/1.png)
 
-In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their price, description and image. In order to know if a product belonged to one of the clients, in my role as a Data Scientist, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods were best suited to solve it.
+In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their name, description, price and image. In order to know if a product belonged to one of the clients, in my role as a Data Scientist, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods were best suited to solve it.
 
 ### Problems that were solved
 
-* Finding a way to choose between ML models (different model types, tuning parameters, and features).
-* Applying a **model evaluation procedure** to estimate how well a model will generalize to *out-of-sample* data.
-* Choosing and fine tuning a **model evaluation metric** to quantify the model performance.
+* Finding a way to choose between ML models (different model types, tuning parameters, and features) to *p*redict* **Product ID** from **Product Name**.
+* Applying a **Model Evaluation Procedure** to estimate how well a model will generalize to *out-of-sample* data.
+* Choosing and fine tuning a **Model Evaluation Metric** to quantify the model performance.
 
-### Review of the model
+### Review of the ML Metrics
 
 * **Model evaluation procedure**: K-fold cross-validation
 * **Model evaluation metrics**: F1 Score
@@ -43,7 +43,7 @@ This project is simple Lorem ipsum dolor generator.
 
 *trijicon 6 x 48 mm acog Dual iluminación ámbar Chevron .223 retículo) 6,5 Moa RMR 2 Vista óptica ta75 Mount, color negro*
 
-Product Text (*X*) | UPC | Product ID (*Y*)
+Product Name (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
 Trijicon ACOG | 658010111379 | 4
 Trijicon ACOG 6x48mm Chevron | 658010111546 |  whats4
