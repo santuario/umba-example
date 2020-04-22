@@ -20,7 +20,7 @@ In order to achieve this, a series of web crawlers were set up to download the i
 ### Workflow
 
 1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
-2. Choose n-gram or n-char approximation
+2. Choose *n-gram* or *n-char* approximation
 3. Vectorizing our dataset 
 4. Building a model
 5. Comparing models
@@ -30,27 +30,27 @@ In order to achieve this, a series of web crawlers were set up to download the i
 9. Build a class
 10. Run a cron job for trainning
 
-
-
-
-
 ## Hands On
 
 ### 1. Reading a text-based dataset
 
-
-This project is simple Lorem ipsum dolor generator.
+One of the goals of the TrackStreet Web Crawlers is to download the name of the products found on a certain web site, for example:
 
 ![Trackstreet Web](./images/2.png)
 
 
+For this case we will have:
+
+Product Name (*X*) |
+--- |
+Trijicon ACOG | 
 
 *trijicon 6 x 48 mm acog Dual iluminación ámbar Chevron .223 retículo) 6,5 Moa RMR 2 Vista óptica ta75 Mount, color negro*
 
 Product Name (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
 Trijicon ACOG | 658010111379 | 4
-Trijicon ACOG 6x48mm Chevron | 658010111546 |  whats4
+Trijicon ACOG 6x48mm Chevron | 658010111546 | d
 Trijicon 6X48 acog. TA648-50G | 658010111249 | 4
 Ultimate Flora Women's Care Probiotic 15 Billion | 631257158789 | 52
 Renew Life Women's Care Ultimate Flora Probiotic | 658010111379 | 52
