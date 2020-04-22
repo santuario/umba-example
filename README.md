@@ -8,7 +8,7 @@ In order to achieve this, a series of web crawlers were set up to download the i
 
 ### Problems that were solved
 
-* Finding a way to choose between ML models (different model types, tuning parameters, and features) to *p*redict* **Product ID** from **Product Name**.
+* Finding a way to choose between ML models (different model types, tuning parameters, and features) to *predict* **Product ID** from **Product Name**.
 * Applying a **Model Evaluation Procedure** to estimate how well a model will generalize to *out-of-sample* data.
 * Choosing and fine tuning a **Model Evaluation Metric** to quantify the model performance.
 
