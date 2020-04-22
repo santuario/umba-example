@@ -59,11 +59,19 @@ Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
 
 ### 2. Dataset preparation and pre-processing
 
-One of the goals of the TrackStreet Web Crawlers is to download the name of the products found on a certain web site, for example:
+
+As we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem.
+
 
 ### 3. Choose *n-gram* or *n-char* approximation for vectorizing
 
-One of the goals of the TrackStreet Web Crawlers is to download the name of the products found on a certain web site, for example:
+In this step, raw text data was transformed into feature vectors and new features was created using the existing dataset. The following ideas was implemented in order to obtain relevant features from our dataset.
+
+2.1 Count Vectors as features
+2.2 TF-IDF Vectors as features
+    2.2.1 Word level
+    2.2.2 N-Gram level
+    2.2.3 Character level (n-char)
 
 
 
