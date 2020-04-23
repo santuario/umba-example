@@ -59,8 +59,20 @@ Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
 
 ### 2. Dataset preparation and pre-processing
 
+First, duplicated values was removed.
 
-As we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem. For example, remove numbers is one of the most common recomendation, but, in our case, that not make sense, because numbers are a significant indetifier of the product.
+
+```python
+
+def clean_duplicated_data(self, df):
+    df['is_duplicated'] = df.duplicated(['X'])    
+    return df.loc[df['is_duplicated'] == False]
+    
+```
+
+
+
+Second, as we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem. For example, remove numbers is one of the most common recomendation, but, in our case, that not make sense, because numbers are a significant indetifier of the product.
 
 The following was implemented:
 
@@ -75,7 +87,7 @@ The following was implemented:
 
 ```python
 
-def pre_processing_data(X,common_freq_count=10,rare_freq_count=10):
+def pre_processing_data(self, X,common_freq_count=10,rare_freq_count=10):
     # Lower Case
     X = X.apply(lambda x: " ".join(x.lower() for x in x.split()))
     print(type(X))
