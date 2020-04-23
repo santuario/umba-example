@@ -168,15 +168,15 @@ def vectorize(self, X, level = 'nchar'):
 
     try:
         if level == 'word':
-            # word level tf-idf
+            # Word level TF-IDF
             self.tfidf = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',max_features=5000, stop_words='english')
 
         elif level == 'ngram':
-            # ngram level tf-idf 
+            # N-gram level TF-IDF
             self.tfidf = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',ngram_range=(2,3), max_features=5000, stop_words='english')
 
         elif level == 'nchar':
-            # characters level tf-idf
+            # N-char TF-IDF
             self.tfidf = TfidfVectorizer(analyzer='char', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',ngram_range=(2,3), max_features=5000, stop_words='english')
 
         X = self.tfidf.fit_transform(X).toarray()
