@@ -174,7 +174,7 @@ def vectorize(self, X, level = 'nchar'):
 ```
 
 
-The best result was obtained using a value of 5 in the *n-char* level as shown in the following graphs:
+The **best** result was obtained using a **value of 5 in the *n-char* level** as shown in the following graphs:
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_1.png)
 
