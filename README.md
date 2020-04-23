@@ -201,6 +201,23 @@ The **best** result was obtained using a **value of 5 in the *n-char* level** as
 
 ### 4. Building and comparing models
 
+The next step was to train and compare different classifiers using the features created in the previous step. The following classifiers were used:
+
+* Naive Bayes Classifier
+* Linear Classifier
+* Support Vector Machine
+
+ The following function is a utility function which can be used to train a model. It accepts the classifier, feature_vector of training data, labels of training data and feature vectors of valid data as inputs. Using these inputs, the model is trained and accuracy score is computed.
+
+ ```python
+
+def evaluate_model(self, estimador, X, y):
+    resultados_estimador = cross_validate(estimador, X, y,
+                     scoring=f1_multilabel, n_jobs=-1, cv=folds, return_train_score=True, return_estimator=True)
+    return resultados_estimador
+```
+
+
 
 
 	
