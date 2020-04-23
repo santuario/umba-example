@@ -151,7 +151,7 @@ trijicon 6 x 48 mm acog | trijicon 6,6 x,x 48,48 mm,mm acog
 
 Product Name (*X*) | Tokenized Product Name (*X'*, N=3)
 --- | --- 
-trijicon 6 x 48 mm acog | tri,rij,iji,jic,ico,con,on ,n 6, 6 ,6  x,... 
+trijicon 6 x 48 mm acog | tri,rij,iji,jic,ico,con,on ,n 6, 6 ,6  x, x ,x 4, 48,48 , mm,mm ,m a, ac,aco,cog
 
 
 
