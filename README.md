@@ -83,7 +83,7 @@ Instead, the following steps were implemented:
 
 Product Name (*X*) | Pre-processed Product Name (*X'*)
 --- | --- 
-The Trijicon, 6 x 48 mm ACOG. TA648-50G | trijicon 6 x 48 mm acog TA648 50G
+The Trijicon, 6 x 48 mm ACOG. TA648-50G | trijicon 6 x 48 mm acog ta648 50g
 
 
 
