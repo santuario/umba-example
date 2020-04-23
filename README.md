@@ -142,23 +142,35 @@ TF-IDF score represents the relative importance of a term in the document and th
 
 
 ```python
-# word level tf-idf
-tfidf_vect = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', max_features=5000)
-tfidf_vect.fit(trainDF['text'])
-xtrain_tfidf =  tfidf_vect.transform(train_x)
-xvalid_tfidf =  tfidf_vect.transform(valid_x)
 
-# ngram level tf-idf 
-tfidf_vect_ngram = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', ngram_range=(2,3), max_features=5000)
-tfidf_vect_ngram.fit(trainDF['text'])
-xtrain_tfidf_ngram =  tfidf_vect_ngram.transform(train_x)
-xvalid_tfidf_ngram =  tfidf_vect_ngram.transform(valid_x)
 
-# characters level tf-idf
-tfidf_vect_ngram_chars = TfidfVectorizer(analyzer='char', token_pattern=r'\w{1,}', ngram_range=(2,3), max_features=5000)
-tfidf_vect_ngram_chars.fit(trainDF['text'])
-xtrain_tfidf_ngram_chars =  tfidf_vect_ngram_chars.transform(train_x) 
-xvalid_tfidf_ngram_chars =  tfidf_vect_ngram_chars.transform(valid_x) 
+def vectorize(self, X, level = 'ngram'):
+
+    min_df, max_df = self.select_tfidf_params(X)
+
+    try:
+        if level == 'word':
+            # word level tf-idf
+            self.tfidf = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',max_features=5000, stop_words='english')
+
+        elif level == 'ngram':
+            # ngram level tf-idf 
+            self.tfidf = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',ngram_range=(2,3), max_features=5000, stop_words='english')
+
+        elif level == 'nchar':
+            # characters level tf-idf
+            self.tfidf = TfidfVectorizer(analyzer='char', token_pattern=r'\w{1,}', min_df=min_df, max_df=max_df, sublinear_tf=True, norm='l2', encoding='latin-1',ngram_range=(2,3), max_features=5000, stop_words='english')
+
+        X = self.tfidf.fit_transform(X).toarray()
+    
+    
+    except ValueError:
+        self.tfidf = TfidfVectorizer(sublinear_tf=True, min_df=0.1, max_df=0.5, norm='l2', encoding='latin-1',
+                                         ngram_range=(1, 2),
+                                         stop_words='english')
+        X = self.tfidf.fit_transform(X).toarray()
+    return X
+
 ```
 
 
