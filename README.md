@@ -57,7 +57,7 @@ Renew Life Everyday Ultimate Flora Probiotic | 631257158772 | 52
 
 ### 2. Dataset preparation and pre-processing
 
-First, duplicated values was removed.
+First, duplicated values were removed.
 
 
 ```python
@@ -70,13 +70,13 @@ def clean_duplicated_data(self, df):
 
 
 
-Second, as we see from the *training data*, we are faced with a non-classical text processing problem, so we do not follow the recommendations made by regular analyzes of scientific texts to attack this type of problem. For example, remove numbers is one of the most common recomendation, but, in our case, that not make sense, because numbers are a significant indetifier of the product.
+Second, as we see from the *training data*, we are faced with a non-classical text processing problem, therefore we do not follow the recommendations made by regular analysis of scientific texts to attack this type of problem. For example, one of the most common recommendations is to remove numbers; in this case, however, it doesn't make much sense because numbers are a significant identifier of the product.
 
-The following was implemented:
+Instead, the following steps were implemented:
 
 
-* Convert to lower case
-* Remove punctuation
+* Converting to lower case
+* Removing punctuation signs
 * Removing stop words
 * Removing the 10 most common words inside the data set
 * Removing the 10 most rare words inside the data set
@@ -110,7 +110,7 @@ def pre_processing_data(self, X,common_freq_count=10,rare_freq_count=10):
 
 ### 3. Choose *n-gram* or *n-char* approximation for vectorizing
 
-In this step, raw text data was transformed into feature vectors and new features was created using the existing dataset. The following ideas was implemented in order to obtain relevant features from our dataset.
+In this step, raw text data was transformed into feature vectors and new features were created using the existing dataset. The following ideas were implemented in order to obtain relevant features from our dataset.
 
 * Count Vectors as features
 * TF-IDF Vectors as features
@@ -131,13 +131,13 @@ def transform_to_count_vectors(self,X):
 
 **TF-IDF Vectors as features**
 
-TF-IDF score represents the relative importance of a term in the document and the entire corpus. TF-IDF score is composed by two terms: the first computes the normalized Term Frequency (TF), the second term is the Inverse Document Frequency (IDF), computed as the logarithm of the number of the documents in the corpus divided by the number of documents where the specific term appears. TF-IDF Vectors can be generated at different levels of input tokens (words, characters, n-grams)
+TF-IDF score represents the relative importance of a term in the document and the entire corpus. TF-IDF score is composed by two terms: the first computes the normalized Term Frequency (TF), the second term is the Inverse Document Frequency (IDF), computed as the logarithm of the number of the documents in the corpus divided by the number of documents where the specific term appears. TF-IDF Vectors can be generated at different levels of input tokens (words, characters, n-grams).
 
 
 
-* Word level: Matrix representing tf-idf scores of every term in different documents
-* N-Gram level: N-grams are the combination of N terms together. This Matrix representing tf-idf scores of N-grams
-* Character level (n-char): Matrix representing tf-idf scores of character level n-grams in the corpus
+* Word level: Matrix representing TF-IDF scores of every term in different documents
+* N-Gram level: N-grams are the combination of N terms together. Matrix representing TF-IDF scores of N-grams
+* Character level (n-char): Matrix representing TF-IDF scores of character level n-grams in the corpus
 
 
 
@@ -174,7 +174,7 @@ def vectorize(self, X, level = 'ngram'):
 ```
 
 
-The best result was obtained using a value of 5 in the *n-char* level as is shown in the following graph:
+The best result was obtained using a value of 5 in the *n-char* level as shown in the following graph:
 
 ![Trackstreet Web 1,20%](./images/Trackstreet_Graphs_1.png)
 
@@ -185,7 +185,7 @@ The best result was obtained using a value of 5 in the *n-char* level as is show
 
 	
 ## Technologies
-Project is created with:
+Project created with:
 * Lorem version: 12.3
 * Ipsum version: 2.33
 * Ament library version: 999
