@@ -4,7 +4,7 @@
 
 ![Trackstreet Web](./images/1.png)
 
-In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their name, description, price and image. In order to know if a product belonged to one of the clients, in my role as a Data Scientist, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods were best suited to solve it.
+In order to achieve this, a series of web crawlers were set up to download the information of different products featured in a series of online stores (BestBuy, Amazon, Target, ...), and analyze their name, description, price and image. In order to know if a product belonged to one of the clients, in **my role as a Data Scientist**, I was commissioned to solve a supervised text classification problem, with the goal of working out which supervised machine learning methods were best suited to solve it.
 
 ### Problems that were solved
 
@@ -36,16 +36,14 @@ One of the goals of the TrackStreet Web Crawlers is to download the name of the 
 
 ![Trackstreet Web](./images/2.png)
 
-
-For this case we will have the following **Product Name** and 
-the objective of the model is to predict the **Product ID**.
+In the previous example the following **Product Name**  was found; while the objective of the overall model is to predict the **Product ID**.
 
 Product Name (*X*) | Product ID (*Y*)
 --- | --- 
 trijicon 6 x 48 mm acog | **UNKNOWN**
 
 
-An excerpt of the *training data* is shown below:
+An excerpt of the used *training data* is shown below:
 
 Product Name (*X*) | UPC | Product ID (*Y*)
 --- | --- | ---
@@ -67,7 +65,7 @@ First, duplicated values was removed.
 def clean_duplicated_data(self, df):
     df['is_duplicated'] = df.duplicated(['X'])    
     return df.loc[df['is_duplicated'] == False]
-    
+
 ```
 
 
