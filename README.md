@@ -21,12 +21,12 @@ In order to achieve this, a series of web crawlers were set up to download the i
 
 1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
 2. [Dataset preparation and pre-processing](#2-dataset-preparation-and-pre-processing)
-3. [Choose *n-gram* or *n-char* approximation for vectorizing](#3-choose-n-gram-or-n-char-approximation-for-vectorizing)
+3. [Choosing *n-gram* or *n-char* approximation for vectorize](#3-choosing-n-gram-or-n-char-approximation-for-vectorize)
 4. [Building and comparing models](#4-building-and-comparing-models)
-5. Identify Outliers
-6. Improve hyperparameters
-7. Build a class
-8. Run a cron job for trainning
+5. Identifing Outliers
+6. Improving hyperparameters
+7. Building a class
+8. Runing a cron job for trainning
 
 ## Hands On
 
@@ -108,7 +108,7 @@ def pre_processing_data(self, X,common_freq_count=10,rare_freq_count=10):
 
 
 
-### 3. Choose *n-gram* or *n-char* approximation for vectorizing
+### 3. Choosing *n-gram* or *n-char* approximation for vectorize
 
 In this step, raw text data was transformed into feature vectors and new features were created using the existing dataset. The following ideas were implemented in order to obtain relevant features from our dataset.
 
