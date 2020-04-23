@@ -176,7 +176,7 @@ def vectorize(self, X, level = 'ngram'):
 
 The best result was obtained using a value of 5 in the *n-char* level as is shown in the following graph:
 
-![Trackstreet Web](./images/Trackstreet_Graphs_1.png){width=250px}
+![Trackstreet Web](./images/Trackstreet_Graphs_1.png){: width=200px}
 
 
 ### 4. Building and comparing models
