@@ -144,7 +144,7 @@ TF-IDF score represents the relative importance of a term in the document and th
 ```python
 
 
-def vectorize(self, X, level = 'ngram'):
+def vectorize(self, X, level = 'nchar'):
 
     min_df, max_df = self.select_tfidf_params(X)
 
@@ -174,9 +174,11 @@ def vectorize(self, X, level = 'ngram'):
 ```
 
 
-The best result was obtained using a value of 5 in the *n-char* level as shown in the following graph:
+The best result was obtained using a value of 5 in the *n-char* level as shown in the following graphs:
 
-![Trackstreet Web 1,20%](./images/Trackstreet_Graphs_1.png)
+![Trackstreet Web](./images/Trackstreet_Graphs_1.png)
+
+![Trackstreet Web](./images/Trackstreet_Graphs_2.png)
 
 
 ### 4. Building and comparing models
