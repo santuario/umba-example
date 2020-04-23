@@ -25,8 +25,8 @@ In order to achieve this, a series of web crawlers were set up to download the i
 4. [Building and comparing models](#4-building-and-comparing-models)
 5. Identifing Outliers
 6. Improving hyperparameters
-7. Building a class
-8. Runing a cron job for trainning
+7. Building a *class* and a cron job for trainning
+
 
 ## Hands On
 
