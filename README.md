@@ -136,8 +136,22 @@ TF-IDF score represents the relative importance of a term in the document and th
 
 
 * Word level: Matrix representing TF-IDF scores of every term in different documents
+
+Product Name (*X*) | Tokenized Product Name (*X'*)
+--- | --- 
+trijicon 6 x 48 mm acog | trijicon, 6, x, 48, mm, acog
+
 * N-Gram level: N-grams are the combination of N terms together. Matrix representing TF-IDF scores of N-grams
+
+Product Name (*X*) | Tokenized Product Name (*X'*)
+--- | --- 
+trijicon 6 x 48 mm acog | trijicon, 6, x, 48, mm, acog
+
 * Character level (n-char): Matrix representing TF-IDF scores of character level n-grams in the corpus
+
+Product Name (*X*) | Tokenized Product Name (*X'*)
+--- | --- 
+trijicon 6 x 48 mm acog | trijicon, 6, x, 48, mm, acog
 
 
 
