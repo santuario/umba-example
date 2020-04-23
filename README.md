@@ -81,6 +81,10 @@ Instead, the following steps were implemented:
 * Removing the 10 most common words inside the data set
 * Removing the 10 most rare words inside the data set
 
+Product Name (*X*) | Pre-processed Product Name (*X'*)
+--- | --- 
+The Trijicon, 6 x 48 mm ACOG. TA648-50G | trijicon 6 x 48 mm acog TA648 50G
+
 
 
 ```python
