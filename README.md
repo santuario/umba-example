@@ -21,8 +21,8 @@ In order to achieve this, a series of web crawlers were set up to download the i
 
 1. [Reading a text-based dataset](#1-reading-a-text-based-dataset)
 2. [Dataset preparation and pre-processing](#2-dataset-preparation-and-pre-processing)
-3. [Choose *n-gram* or *n-char* approximation for vectorizing](#2-choose-n-gram-or-n-char-approximation-for-vectorizing)
-4. Comparing models
+3. [Choose *n-gram* or *n-char* approximation for vectorizing](#3-choose-n-gram-or-n-char-approximation-for-vectorizing)
+4. [Building and comparing models](#4-building-and-comparing-models)
 5. Identify Outliers
 6. Improve hyperparameters
 7. Build a class
@@ -174,6 +174,12 @@ def vectorize(self, X, level = 'ngram'):
 ```
 
 
+The best result was obtained using a value of 5 in the *n-char* level as is shown in the following graph:
+
+![Trackstreet Web](./images/Trackstreet_Graphs_1.png)
+
+
+### 4. Building and comparing models
 
 
 
