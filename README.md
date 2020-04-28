@@ -285,9 +285,9 @@ Every two weeks, a cron job is in charge of training a new model using the lates
 
  | Function
 --- | --- 
-1. Read Data | ```def read_data```
-2. Read Data | ```def read_data```
-3. Read Data | ```def read_data```
+1) Read Data | ```def read_data```
+2) Read Data | ```def read_data```
+3) Read Data | ```def read_data```
 
 	
 
