@@ -207,19 +207,38 @@ The next step was to train and compare different classifiers using the features 
 * Linear Classifier
 * Support Vector Machine
 
- The following function is a utility function which can be used to train a model. It accepts the classifier, feature_vector of training data, labels of training data and feature vectors of valid data as inputs. Using these inputs, the model is trained and accuracy score is computed.
+ The following functions are a *utility functions* which can be used to train a model. It accepts the classifier (estimador), the feature vector of training data (X) and labels of training data (y) as inputs. Using these inputs, the model is trained and accuracy score is computed using a custom F1 multilabel score.
 
  ```python
 
+def f1_multilabel(self, estimador, X, y):
+        preds = estimador.predict(X)
+        return f1_score(y, preds, average="micro")
+
 def evaluate_model(self, estimador, X, y):
-    resultados_estimador = cross_validate(estimador, X, y,
-                     scoring=f1_multilabel, n_jobs=-1, cv=folds, return_train_score=True, return_estimator=True)
-    return resultados_estimador
+        resultados_estimador = cross_validate(estimador, X, y,
+                     scoring=self.f1_multilabel, n_jobs=-1, cv=self.folds, return_train_score=True, return_estimator=True)
+        return resultados_estimador
 ```
+
+The evaluation values can be known using the function *get_results*
+
+ ```python
+
+def get_results():
+
+```
+
+This function returns a table with the respective values **Fit Time**, **Score Time**, **Test Score** and **Train Score** of each classifier, an example can be seen below:
 
 Classifier | fit_time | score_time | test_score | train_score
 --- | ---  | --- | --- | ---  
-LogisticRegression | 178.059815  | 11.571758 | 0.440469 | 0.635866  
+LogisticRegression | 178.059815  | 11.571758 | 0.440469 | 0.635866 
+RandomForestClassifier | 138.679052  | 2.925852 | 0.426903 | 0.810615 
+
+The chosen model had the characteristic of having the highest F1 Score and shortest training time as shown in the following graph:
+
+![Trackstreet Web](./images/Trackstreet_Graphs_3.png)
 
 
 	
