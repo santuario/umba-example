@@ -23,9 +23,8 @@ In order to achieve this, a series of web crawlers were set up to download the i
 2. [Dataset preparation and pre-processing](#2-dataset-preparation-and-pre-processing)
 3. [Choosing *n-gram* or *n-char* approximation for vectorize](#3-choosing-n-gram-or-n-char-approximation-for-vectorize)
 4. [Building and comparing models](#4-building-and-comparing-models)
-5. Identifing Outliers
-6. Improving hyperparameters
-7. Building a *class* and a cron job for trainning
+5. [Optimizing the model (improving hyperparameters)](#5-optimizing-the-model-(improving-hyperparameters))
+6. [Building the *TextPredictorEngine class* and a cron job for trainning](#6-building-the-TextPredictorEngine-class-and-a-cron-job-for-trainning)
 
 
 ## Hands On
@@ -260,7 +259,11 @@ def make_plot_confusion_matrix(self,conf_mat,
 ![Trackstreet Web](./images/Trackstreet_Graphs_4.png)
 
 
+### 5. Optimizing the model (improving hyperparameters)
 
+
+
+### 6. Building the *TextPredictorEngine class* and a cron job for trainning
 
 	
 ## Technologies

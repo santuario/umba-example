@@ -190,7 +190,7 @@ class TextPredictorEngine:
 
     def find_bestEstimator_SVC(self):
         SVCpipe = Pipeline([('scale', StandardScaler()), ('SVC', LinearSVC())])
-        # Gridsearch to determine the value of C
+        # Gridsearch to determine the value of the best hyperparameters
         param_grid = {'SVC__C': np.arange(0.01, 100, 10)}
         linearSVC_grid = GridSearchCV(SVCpipe, param_grid, cv=2, return_train_score=True)
         try:
