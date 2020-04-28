@@ -285,17 +285,7 @@ Every two weeks, a cron job is in charge of training a new model using the lates
 
 Step | Function
 --- | ---
-1) Read Data | [*def read_data*](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
-2) Read Data | *def read_data*
-3) Read Data | *def read_data*
-
-
-
-Step | Function
---- | ---
-Read Data | [*def read_data*](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
-Read Data | [``` def read_data ```](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
-Read Data | *def read_data*
+Read Data | [```python def read_data ```](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
 
 	
 
