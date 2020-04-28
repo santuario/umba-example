@@ -240,6 +240,27 @@ The chosen model had the characteristic of having the highest F1 Score and short
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_3.png)
 
+The **Confusion Matrix** of the selected model **Linear SVC** was calculated using the function *make_plot_confusion_matrix* and can be seen below.
+
+ ```python
+
+def make_plot_confusion_matrix(self,conf_mat,
+                          hide_spines=False,
+                          hide_ticks=False,
+                          figsize=None,
+                          cmap=None,
+                          colorbar=False,
+                          show_absolute=True,
+                          show_normed=False,
+                              show_text=True,
+                              normed_type="precision"):
+
+```
+
+![Trackstreet Web](./images/Trackstreet_Graphs_4.png)
+
+
+
 
 	
 ## Technologies
