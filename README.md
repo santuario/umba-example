@@ -294,7 +294,7 @@ Step | Function
 Step | Function
 --- | ---
 Read Data | [*def read_data*](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
-Read Data | *def read_data*
+Read Data | [``` def read_data ```](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
 Read Data | *def read_data*
 
 	
