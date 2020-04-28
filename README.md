@@ -283,7 +283,7 @@ The best hyperparameters values ​​found for our model are shown below:
 
 Every two weeks, a cron job is in charge of training a new model using the latest data collected by the web crawler. The [code/nchar_predictor.py](https://github.com/santuario/umba-example/blob/master/code/nchar_predictor.py) script, which is in charge of doing it, follows the following procedure:
 
- | Function
+Procedure | Function
 --- | --- 
 1) Read Data | ```def read_data```
 2) Read Data | ```def read_data```
