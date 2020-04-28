@@ -217,7 +217,9 @@ def evaluate_model(self, estimador, X, y):
     return resultados_estimador
 ```
 
-
+Classifier | fit_time | score_time | test_score | train_score
+--- | ---  | --- | --- | ---  
+LogisticRegression | 178.059815  | 11.571758 | 0.440469 | 0.635866  
 
 
 	
