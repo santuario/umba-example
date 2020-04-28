@@ -262,6 +262,22 @@ def make_plot_confusion_matrix(self,conf_mat,
 ### 5. Optimizing the model (improving hyperparameters)
 
 
+In order to optimize our classifier model, a *grid search* is made to find the best combination of values ​​for the hyperparameters using the following function:
+
+```python
+def find_bestEstimator_SVC(self):
+```
+
+
+In the case of the *Inverse Regularization Strength* value, the following graph shows the advantage of optimizing hyperparameters:
+
+![Trackstreet Web](./images/Trackstreet_Graphs_5.png)
+
+The best hyperparameters values ​​found for our model are shown below:
+
+![Trackstreet Web](./images/Trackstreet_Graphs_6.png)
+
+
 
 ### 6. Building the *TextPredictorEngine class* and a cron job for trainning
 
