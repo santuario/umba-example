@@ -281,32 +281,15 @@ The best hyperparameters values ​​found for our model are shown below:
 
 ### 6. Building the *TextPredictorEngine class* and a cron job for trainning
 
+Every two weeks, a cron job is in charge of training a new model using the latest data collected by the web crawler. The [code/nchar_predictor.py](https://github.com/santuario/umba-example/blob/master/code/nchar_predictor.py) script, which is in charge of doing it, follows the following procedure:
+
+ | Function
+--- | --- 
+1. Read Data | ```def read_data```
+2. Read Data | ```def read_data```
+3. Read Data | ```def read_data```
+
 	
-## Technologies
-Project created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
-
-
-```python
-# Model evaluation metrics: F1 Score
-from sklearn.metrics import f1_score
-
-
-def f1_multilabel(estimador, X, y):
-    preds = estimador.predict(X)
-    return f1_score(y, preds, average="micro")
-```
-	
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
 
 # BONUS
 
