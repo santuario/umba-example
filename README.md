@@ -207,7 +207,7 @@ The next step was to train and compare different classifiers using the features 
 * Linear Classifier
 * Support Vector Machine
 
- The following functions are a *utility functions* which can be used to train a model. It accepts the classifier (estimador), the feature vector of training data (X) and labels of training data (y) as inputs. Using these inputs, the model is trained and accuracy score is computed using a custom F1 multilabel score.
+ The following functions are *utility functions* which can be used to train a model (the full script can be found at [code/rating_engine.py](https://github.com/santuario/umba-example/blob/master/code/rating_engine.py)). It accepts the classifier (estimador), the feature vector of training data (X) and labels of training data (y) as inputs. Using these inputs, the model is trained and accuracy score is computed using a custom F1 multilabel score.
 
  ```python
 
