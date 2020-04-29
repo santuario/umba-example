@@ -202,9 +202,17 @@ The **best** result was obtained using a **value of 5 in the *n-char* level** as
 
 The next step was to train and compare different classifiers using the features created in the previous step. The following classifiers were used:
 
-* Naive Bayes Classifier
-* Linear Classifier
+* Logistic Regression
+* Random Forest
+* Bagging
+* Ada Boost
+* Gradient Boosting
+* Linear SVC
+* Multinomial Naïve Bayes
+* Gaussian Naïve Bayes
+* Bernoulli Naïve Bayes
 * Support Vector Machine
+
 
  The following functions are *utility functions* which can be used to train a model (the full script can be found at [code/rating_engine.py](https://github.com/santuario/umba-example/blob/master/code/rating_engine.py)). It accepts the classifier (estimador), the feature vector of training data (X) and labels of training data (y) as inputs. Using these inputs, the model is trained and accuracy score is computed using a custom F1 multilabel score.
 
