@@ -24,7 +24,7 @@ In order to achieve this, a series of web crawlers were set up to download the i
 3. [Choosing *n-gram* or *n-char* approximation for vectorize](#3-choosing-n-gram-or-n-char-approximation-for-vectorize)
 4. [Building and comparing models](#4-building-and-comparing-models)
 5. [Optimizing the model (improving hyperparameters)](#5-optimizing-the-model-improving-hyperparameters)
-6. [Building the *TextPredictorEngine class* and a cron job for trainning](#6-building-the-TextPredictorEngine-class-and-a-cron-job-for-trainning)
+6. [Building the *TextPredictorEngine class* and a cron job for training](#6-building-the-TextPredictorEngine-class-and-a-cron-job-for-training)
 
 
 ## Hands On
@@ -214,7 +214,7 @@ The next step was to train and compare different classifiers using the features 
 * Support Vector Machine
 
 
- The following functions are *utility functions* which can be used to train a model (the full script can be found at [code/rating_engine.py](https://github.com/santuario/umba-example/blob/master/code/rating_engine.py)). It accepts the classifier (estimador), the feature vector of training data (X) and labels of training data (y) as inputs. Using these inputs, the model is trained and accuracy score is computed using a custom F1 multilabel score.
+ The following functions are *utility functions* which can be used to train a model (the full script can be found at [code/rating_engine.py](https://github.com/santuario/umba-example/blob/master/code/rating_engine.py)). It accepts the classifier (estimador), the feature vector of training data (**X**) and labels of training data (**y**) as inputs. Using these inputs, the model is trained and the *accuracy score* is computed using a custom F1 multilabel score.
 
  ```python
 
@@ -243,7 +243,7 @@ Classifier | fit_time | score_time | test_score | train_score
 LogisticRegression | 178.059815  | 11.571758 | 0.440469 | 0.635866 
 RandomForestClassifier | 138.679052  | 2.925852 | 0.426903 | 0.810615 
 
-The chosen model had the characteristic of having the highest F1 Score and shortest training time as shown in the following graph:
+The model **Linear SVC** was choosen because it had the highest F1 Score and shortest training time as shown in the following graph:
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_3.png)
 
@@ -270,7 +270,7 @@ def make_plot_confusion_matrix(self,conf_mat,
 ### 5. Optimizing the model (improving hyperparameters)
 
 
-In order to optimize our classifier model, a *grid search* is made to find the best combination of values ​​for the hyperparameters using the following function:
+In order to optimize our classifier model, a *grid search* was made to find the best combination of values ​​for the hyperparameters using the following function:
 
 ```python
 def find_bestEstimator_SVC(self):
@@ -281,15 +281,15 @@ In the case of the *Inverse Regularization Strength* value, the following graph 
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_5.png)
 
-The best hyperparameters values ​​found for our model are shown below:
+The best hyperparameter values ​​found for our model are shown below:
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_6.png)
 
 
 
-### 6. Building the *TextPredictorEngine class* and a cron job for trainning
+### 6. Building the *TextPredictorEngine class* and a cron job for training
 
-Every two weeks, a cron job is in charge of training a new model using the latest data collected by the web crawler. The [code/nchar_predictor.py](https://github.com/santuario/umba-example/blob/master/code/nchar_predictor.py) script, which is in charge of doing it, follows the following procedure:
+Every two weeks, a *cron job* is in charge of training a new model using the latest data collected by the web crawler. The [code/nchar_predictor.py](https://github.com/santuario/umba-example/blob/master/code/nchar_predictor.py) script, which is in charge of doing so, follows the following procedure:
 
 Step | Function
 --- | ---
@@ -316,13 +316,8 @@ As you can see, I breath and live technology; but all the babble about the next 
 I can be reading a really cool article on *Wired Magazine* about this new fridge that uses AI to predict when you need to buy more sparkling water or something and, for me, it is like watching paint dry. I couldn't care less. What I *do* care about is what you do with it: how do you take this algorithm based technology and make it live in places it's never been before... What I'm really interested in is the convergence of *Data* and *AI/ML* and ethics as a tool for creative troubleshooting. For example: 
 
 
-**1)** In order to understand the *social mobility* based on skin tone, [I calculated the PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
+**1)** In order to understand if skin tone have any effect on *social mobility*, [I calculated the PANTONE®* of mexican political parties](https://www.youtube.com/watch?v=AZcDNoGPaVg) 
 
-**2)** I used Big Data on *Twitter* in order to see [the age at which sexual assaults begins in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https://verne.elpais.com/verne/2016/05/19/mexico/1463615258_699475.html) 
+**2)** Using Big Data techniques on *Twitter*, I made an analysis showing [the age at which women were sexually harrased for the first time in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https://verne.elpais.com/verne/2016/05/19/mexico/1463615258_699475.html) 
 
-**3)** Or I made a *LinkedIn*'s web scraping to realize if exists a [*shortcut* to be CEO in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https%3A%2F%2Fwww.unocero.com%2Fredes-sociales%2Fblancos-hombres-de-escuelas-privadas-y-bilingues-asi-son-los-ceos-en-mexico%2F&sandbox=1) 
-
-
-
-
-
+**3)** I also made a *LinkedIn*'s web scraping to figure out what are the [*shortcuts* in the path to become a CEO in Mexico](https://translate.google.com/translate?hl=en&sl=es&tl=en&u=https%3A%2F%2Fwww.unocero.com%2Fredes-sociales%2Fblancos-hombres-de-escuelas-privadas-y-bilingues-asi-son-los-ceos-en-mexico%2F&sandbox=1) 
