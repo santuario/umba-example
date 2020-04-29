@@ -287,14 +287,13 @@ Step | Function
 --- | ---
 Read Data | [``` def set_X_Y ```](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
 Process Data | [``` def transform_input ```](), [``` def transform_input ```]()
-Read Data | [``` def set_X_Y ```]()
-Read Data | [``` def set_X_Y ```]()
-Read Data | [``` def set_X_Y ```]()
-Read Data | [``` def set_X_Y ```]()
-Read Data | [``` def set_X_Y ```]()
+Vectorize Data | [``` def vectorize ```]()
+Remove Outliers | [``` def remove_outliers```]()
+Select Hyperparameters | [``` def find_bestEstimator_SVC```]()
+Make Predictions | [``` def predict```]()
 
 
-Train the model | [``` def do_training```]()
+
 
 
 	
