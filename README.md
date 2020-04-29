@@ -293,13 +293,13 @@ Every two weeks, a cron job is in charge of training a new model using the lates
 
 Step | Function
 --- | ---
-Read Data | [``` def set_X_Y ```](https://github.com/santuario/umba-example/blob/813aac777bc78d16781a6dec87a80003b32e3475/code/nchar_predictor.py#L108)
-Process Data | [``` def transform_input ```](), [``` def transform_input ```]()
-Vectorize Data | [``` def vectorize ```]()
-Remove Outliers | [``` def remove_outliers```]()
-Select Hyperparameters | [``` def find_bestEstimator_SVC```]()
-Train the model | [``` def do_training```]()
-Make Predictions | [``` def predict```]()
+Read Data | [``` def set_X_Y ```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L79)
+Process Data | [``` def transform_input ```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L91)
+Vectorize Data | [``` def vectorize ```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L123)
+Remove Outliers | [``` def remove_outliers```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L182)
+Select Hyperparameters | [``` def find_bestEstimator_SVC```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L191)
+Train the model | [``` def do_training```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L71)
+Make Predictions | [``` def predict```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L203)
 
 
 
