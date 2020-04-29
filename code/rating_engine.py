@@ -42,6 +42,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn.svm import SVC
 
+import matplotlib.pyplot as plt 
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import train_test_split
+import seaborn as sns
+from sklearn import metrics
+from sklearn.utils.multiclass import unique_labels
+
 # Model evaluation procedure: K-Fold
 from sklearn.model_selection import cross_validate
 
@@ -95,12 +102,11 @@ class RatingEngine:
         self.tfidf = None
         self.is_tfidf_loaded = False
 
+        self.is_using_hash = False
+
     def __repr__(self):
         return self.description()
 
-    def do_training(self, raw_X, raw_y):
-        self.set_X_Y(raw_X, raw_y)
-        self.train()
 
     def description(self):
         description_text = "RatingEngine: Evaluate classifiers to predict Product ID from Product Name"
@@ -113,6 +119,48 @@ class RatingEngine:
             self.features = X
 
         self.labels = Y
+
+
+    ####################################################################
+    # Processing Methods
+    ####################################################################
+
+
+    def pre_processing_data(self, X,common_freq_count=10,rare_freq_count=10):
+        # Lower Case
+        X = X.apply(lambda x: " ".join(x.lower() for x in x.split()))
+        print(type(X))
+        # Removing Punctuation
+        X = X.str.replace('[^\w\s]','')
+        # Removing Stop Words
+        X = X.apply(lambda x: " ".join(x for x in x.split() if x not in stop))
+        # Common Word Removal
+        common_freq = pd.Series(' '.join(X).split()).value_counts()[:common_freq_count]
+        common_freq = list(common_freq.index)
+        X = X.apply(lambda x: " ".join(x for x in x.split() if x not in common_freq))
+        # Rare words Removal
+        rare_freq = pd.Series(' '.join(X).split()).value_counts()[-rare_freq_count:]
+        rare_freq = list(rare_freq.index)
+        X = X.apply(lambda x: " ".join(x for x in x.split() if x not in rare_freq))
+        
+        return X
+
+
+    def prepare_X_y(self, X,y):
+        self.is_using_hash = False
+
+        if is_using_hash is True:
+            hashing_tfidf = Pipeline([("hashing", hashing), ("tidf", tfidf_T)])
+            features  = hashing_tfidf.fit_transform(X).toarray()
+            labels = y
+        else:
+            features  = tfidf_V.fit_transform(X).toarray()
+            labels = y
+
+        #print('Features shape: {}'.format(features.shape))
+        return features, labels
+
+
 
 
     ####################################################################
@@ -218,71 +266,3 @@ class RatingEngine:
 
 
 
-
-
-
-
-
-    ####################################################################
-    # Process Methods
-    ####################################################################
-
-    def transform_input(self, X):
-        # lowering and removing punctuation
-        X = X.apply(lambda x: re.sub(r'[^\w\s]', '', x.lower()))
-        # numerical feature engineering
-        # total length of sentence
-        X.apply(lambda x: len(x))
-        # get number of words
-        X.apply(lambda x: len(x.split(' ')))
-        X.apply(
-                lambda x: len([t for t in x.split(' ') if t not in self.stop_words]))
-        # get the average word length
-        X.apply(lambda x: np.mean([len(t) for t in x.split(' ') if t not in self.stop_words]) if len(
-                    [len(t) for t in x.split(' ') if t not in self.stop_words]) > 0 else 0)
-        # get the average word length
-        X.apply(lambda x: x.count(','))
-        return X
-
-    def generate_dict_trick(self, X_phrases):
-        frame = {'X': pd.Series(X_phrases), 'y': pd.Series(self.labels)}
-        trackstreet_df = pd.DataFrame(frame)
-        all_brand_id = trackstreet_df.y.value_counts().index.tolist()
-        all_brand_value = trackstreet_df.y.value_counts().tolist()
-
-        for brand, count in zip(all_brand_id, all_brand_value):
-            product_text = trackstreet_df[trackstreet_df.y == brand].X.str.cat(sep=' ').lower()
-            # function to split text into word
-            tokens = word_tokenize(product_text)
-            frequency_dist = nltk.FreqDist(tokens)
-            # This gives the top word used in the text
-            word_brand = sorted(frequency_dist, key=frequency_dist.__getitem__, reverse=True)[0]
-            self.dict_trick[str(word_brand)] = int(brand)
-
-    def vectorize(self, X):
-
-        min_df, max_df = self.select_tfidf_params(X)
-
-        try:
-            self.tfidf = TfidfVectorizer(sublinear_tf=True, min_df=min_df, max_df=max_df, norm='l2', encoding='latin-1', ngram_range=(1, 2),
-                                     stop_words='english')
-            X = self.tfidf.fit_transform(X).toarray()
-        except ValueError:
-            self.tfidf = TfidfVectorizer(sublinear_tf=True, min_df=0.1, max_df=0.5, norm='l2', encoding='latin-1',
-                                         ngram_range=(1, 2),
-                                         stop_words='english')
-            X = self.tfidf.fit_transform(X).toarray()
-        return X
-
-
-    def select_tfidf_params(self, X):
-        count_data = len(X)
-        min_df = 0.1 - np.log(count_data) / 500
-        max_df = 1.0 - np.log(count_data) / 100
-        return min_df, max_df
-
-    ####################################################################
-    # Train Methods
-    ####################################################################
-
-    
