@@ -302,8 +302,7 @@ Train the model | [``` def do_training```](https://github.com/santuario/umba-exa
 Make Predictions | [``` def predict```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L203)
 
 
-
-
+For the production enviroment, the script was tested using *unittest procedures than can be found at [code/test_product.py](https://github.com/santuario/umba-example/blob/master/code/test_product.py)
 
 	
 
