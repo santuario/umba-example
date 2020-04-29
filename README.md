@@ -290,6 +290,7 @@ Process Data | [``` def transform_input ```](), [``` def transform_input ```]()
 Vectorize Data | [``` def vectorize ```]()
 Remove Outliers | [``` def remove_outliers```]()
 Select Hyperparameters | [``` def find_bestEstimator_SVC```]()
+Train the model | [``` def do_training```]()
 Make Predictions | [``` def predict```]()
 
 
