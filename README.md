@@ -247,7 +247,7 @@ The model **Linear SVC** was choosen because it had the highest F1 Score and sho
 
 ![Trackstreet Web](./images/Trackstreet_Graphs_3.png)
 
-The **Confusion Matrix** of the selected model **Linear SVC** was calculated using the function *make_plot_confusion_matrix* and can be seen below.
+The **Confusion Matrix** of the selected model **Linear SVC** was calculated using the function [``` def make_plot_confusion_matrix```](https://github.com/santuario/umba-example/blob/0b34bb64dce40035530904fe830c738004d1c6d8/code/rating_engine.py#L192) and can be seen below.
 
  ```python
 
