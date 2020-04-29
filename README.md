@@ -228,7 +228,7 @@ def evaluate_model(self, estimador, X, y):
         return resultados_estimador
 ```
 
-The evaluation values can be known using the function *get_results*
+The evaluation values can be known using the function [``` def get_results```](https://github.com/santuario/umba-example/blob/b876a8e4b47b19d2aa0b9367d9db2fdaacfaf3a0/code/rating_engine.py#L180)
 
  ```python
 
@@ -270,7 +270,7 @@ def make_plot_confusion_matrix(self,conf_mat,
 ### 5. Optimizing the model (improving hyperparameters)
 
 
-In order to optimize our classifier model, a *grid search* was made to find the best combination of values ​​for the hyperparameters using the following function:
+In order to optimize our classifier model, a *grid search* was made to find the best combination of values ​​for the hyperparameters using the function [``` def find_bestEstimator_SVC```](https://github.com/santuario/umba-example/blob/3fe029c1059414c04b0d0380eb6413341fcc60f3/code/nchar_predictor.py#L191):
 
 ```python
 def find_bestEstimator_SVC(self):
